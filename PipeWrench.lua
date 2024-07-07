@@ -1512,6 +1512,7 @@ Exports.vector2 = loadstring("return _G['vector2']")()
 
 _G.PIPEWRENCH_READY = false
 triggerEvent('OnPipeWrenchBoot', false)
+triggerEvent('OnPipeWrenchClassCreate', false)
 Events.OnGameBoot.Add(function()
 
 --[lua/client/Blacksmith/ISUI/ISBlacksmithMenu.d.ts]
@@ -4013,6 +4014,7 @@ Events.OnGameBoot.Add(function()
   _G.PIPEWRENCH_READY = true
   -- Trigger reimport blocks for all compiled PipeWrench TypeScript file(s).
   triggerEvent('OnPipeWrenchBoot', true)
+  triggerEvent('OnPipeWrenchClassCreate', true)
 end)
 -- [LUA-PARTIAL:STOP]
 return Exports
